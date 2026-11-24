@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Penang - Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <h2>DISCOVER PENANG</h2>
+        <button class="menu-toggle">☰</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="attractions.html">Attractions</a></li>
+            <li><a href="calculator.html">Calculator</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="page-banner">
+    <h1>Ticket Cost Calculator</h1>
+    <p>Calculate your estimated attraction entrance fees.</p>
+</section>
+
+<section class="calculator-section">
+
+    <form id="ticket-form">
+
+        <label for="citizenship">Citizenship Status:</label>
+        <select id="citizenship" required>
+            <option value="">Select Citizenship</option>
+            <option value="malaysian">Malaysian</option>
+            <option value="foreigner">Non-Malaysian</option>
+        </select>
+
+        <label for="attraction">Select Attraction:</label>
+        <select id="attraction" required>
+            <option value="">Choose Attraction</option>
+            <option value="penanghill">Penang Hill (Bukit Bendera)</option>
+            <option value="warmuseum">Penang War Museum</option>
+            <option value="fortcornwallis">Fort Cornwallis</option>
+        </select>
+
+        <div class="price-info">
+            <p>Adult Ticket: <span id="adult-price">RM 0.00</span></p>
+            <p>Child Ticket: <span id="child-price">RM 0.00</span></p>
+        </div>
+
+      <div id="express-option" style="display: none;">
+
+    <label for="express-lane">Ticket Type:</label>
+
+    <select id="express-lane">
+        <option value="standard">Standard Lane</option>
+        <option value="express">Express Lane (+RM20 per person)</option>
+    </select>
+
+</div>
+
+        <label for="adults">Number of Adults:</label>
+        <input type="number" id="adults" min="0" max="100" value="1" required>
+
+        <label for="children">Number of Children:</label>
+        <input type="number" id="children" min="0" max="100" value="0" required>
+
+        <button type="submit" class="btn">Calculate Total</button>
+
+        <p id="calculator-message"></p>
+
+        <div class="result-box">
+            <h2>Estimated Total</h2>
+            <h1 id="total">RM 0.00</h1>
+            <p id="calculation-breakdown"></p>
+        </div>
+
+    </form>
+
+    <p class="small-note">
+        Note: Ticket prices are based on the prices provided
+        for this website demonstration. Express Lane is an
+        additional RM20 per person at Penang Hill.
+    </p>
+
+</section>
+
+<footer>
+    <p>© 2026 Discover Penang | Malaysian Heritage Website</p>
+</footer>
+
+</body>
+</html>

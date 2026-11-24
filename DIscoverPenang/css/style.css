@@ -1,0 +1,511 @@
+
+/* =========================================
+   DISCOVER PENANG - PREMIUM WEBSITE DESIGN
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap');
+
+:root {
+    --primary: #78272e;
+    --dark: #30191b;
+    --gold: #d5aa64;
+    --cream: #faf6ef;
+    --white: #ffffff;
+    --text: #302b28;
+    --muted: #77716b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--cream);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* NAVIGATION BAR */
+
+header {
+    background-color: var(--dark);
+    position: relative;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1250px;
+    margin: auto;
+    padding: 20px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h2 {
+    color: white;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+    font-size: 23px;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.navbar ul a {
+    color: #f5e9dc;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navbar ul a:hover {
+    color: var(--gold);
+}
+
+.menu-toggle {
+    display: none;
+    color: white;
+    background: transparent;
+    border: 1px solid #ffffff66;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* HOMEPAGE HERO */
+
+.hero {
+    min-height: 650px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(30, 15, 16, 0.85),
+            rgba(30, 15, 16, 0.25)
+        ),
+        url("https://owg.com.my/wp-content/uploads/2019/11/The-Top-Komtar-Picks.jpg?w=600")
+        center/cover no-repeat;
+
+    display: flex;
+    align-items: center;
+    padding: 80px 9%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 750px;
+    animation: fadeUp 1s ease;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 6vw, 76px);
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #eee5dd;
+    max-width: 600px;
+    margin-bottom: 35px;
+}
+
+/* BUTTON */
+
+.btn {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--dark);
+    padding: 15px 30px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 800;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px #00000030;
+}
+
+/* INTRODUCTION */
+
+.introduction {
+    max-width: 1000px;
+    margin: auto;
+    padding: 100px 35px;
+    text-align: center;
+}
+
+.introduction h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.introduction p {
+    max-width: 800px;
+    margin: auto;
+    color: var(--muted);
+    font-size: 16px;
+}
+
+/* ATTRACTION SECTION */
+
+.featured {
+    padding: 80px 7%;
+    text-align: center;
+}
+
+.featured > h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    color: var(--primary);
+    margin-bottom: 45px;
+}
+
+.attraction-container {
+    max-width: 1250px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.attraction-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: left;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    transition: 0.35s;
+}
+
+.attraction-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.15);
+}
+
+.attraction-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.attraction-card:hover img {
+    transform: scale(1.04);
+}
+
+.attraction-card h3 {
+    color: var(--primary);
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    margin: 20px 20px 10px;
+}
+
+.attraction-card p {
+    color: var(--muted);
+    font-size: 14px;
+    padding: 0 20px 25px;
+}
+
+/* OTHER PAGE BANNER */
+
+.page-banner {
+    background:
+        linear-gradient(
+            rgba(48,25,27,0.88),
+            rgba(48,25,27,0.88)
+        ),
+        url("https://owg.com.my/wp-content/uploads/2019/11/The-Top-Komtar-Picks.jpg?w=1500")
+        center/cover;
+
+    padding: 90px 25px;
+    text-align: center;
+    color: white;
+}
+
+.page-banner h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.page-banner p {
+    color: #eadbd0;
+}
+
+/* FORMS */
+
+.form-section,
+.calculator-section {
+    max-width: 600px;
+    margin: 70px auto;
+    padding: 0 25px;
+}
+
+.form-section form,
+.calculator-section form {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+}
+
+label {
+    display: block;
+    margin: 18px 0 7px;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+input,
+select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ded6cd;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 15px;
+    background: #fffdfa;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px #d5aa6430;
+}
+
+form .btn {
+    width: 100%;
+    margin-top: 25px;
+}
+
+/* CALCULATOR RESULT */
+
+.result-box {
+    background: var(--cream);
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.result-box h2 {
+    color: var(--primary);
+    font-family: 'Playfair Display', serif;
+}
+
+.result-box h1 {
+    font-size: 35px;
+    color: var(--primary);
+}
+
+.small-note {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+/* ABOUT CALLOUT */
+
+.callout {
+    background: var(--primary);
+    color: white;
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.callout h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+/* FOOTER */
+
+footer {
+    background: var(--dark);
+    color: #e9ded5;
+    text-align: center;
+    padding: 28px 20px;
+    margin-top: 50px;
+    font-size: 13px;
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* TABLET */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        padding: 18px 22px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar ul {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        padding: 20px 0 5px;
+    }
+
+    .navbar ul.open {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 60px 7%;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .attraction-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .page-banner h1 {
+        font-size: 36px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 550px) {
+
+    .attraction-container {
+        grid-template-columns: 1fr;
+    }
+
+    .introduction {
+        padding: 65px 25px;
+    }
+
+    .introduction h2 {
+        font-size: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .form-section form,
+    .calculator-section form {
+        padding: 25px;
+    }
+}
+
+/* PENANG LOCAL VIDEO */
+
+.video-section {
+    background: #30191b;
+    padding: 80px 8%;
+    text-align: center;
+    color: white;
+}
+
+.video-heading {
+    max-width: 750px;
+    margin: 0 auto 40px;
+}
+
+.video-label {
+    color: #d5aa64;
+    letter-spacing: 4px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.video-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.video-heading p {
+    color: #eee5dd;
+}
+
+.video-container {
+    width: 100%;
+    max-width: 950px;
+    margin: auto;
+    aspect-ratio: 16 / 9;
+    border: 4px solid #d5aa64;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.video-caption {
+    color: #d5aa64;
+    margin-top: 25px;
+}
+
+@media (max-width: 550px) {
+    .video-section {
+        padding: 55px 6%;
+    }
+
+    .video-heading h2 {
+        font-size: 30px;
+    }
+}
